@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/load_state_errorMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/load_state_retry"
+            android:text="Error message"
+            android:textSize="16sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/load_state_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="3dp">
+
+        </androidx.cardview.widget.CardView>
+
+        <ProgressBar
+            android:id="@+id/load_state_progress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:indeterminateTint="@color/color_red"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
